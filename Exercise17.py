@@ -21,43 +21,19 @@ text_8=[x.lower() for x in text8]
 #import text 9
 text_9=[x.lower() for x in text9]
 
-#import stopwords
-from nltk.corpus import stopwords
-stop_words=set(stopwords.words('english'))
 
-for w in text_1:
-    if w in stop_words:
-        text_1.remove(w)
-for w in text_2:
-    if w in stop_words:
-        text_2.remove(w)
-for w in text_3:
-    if w in stop_words:
-        text_3.remove(w)
-for w in text_4:
-    if w in stop_words:
-        text_4.remove(w)
-for w in text_5:
-    if w in stop_words:
-        text_5.remove(w)
-for w in text_6:
-    if w in stop_words:
-        text_6.remove(w)
-for w in text_7:
-    if w in stop_words:
-        text_7.remove(w)
-for w in text_8:
-    if w in stop_words:
-        text_8.remove(w)
-for w in text_9:
-    if w in stop_words:
-        text_9.remove(w)
-        
 the_same_words = []
 #append the same words if they are similar
 for w in text_1:
     if w in text_2 and text_3 and text_4 and text_5 and text_6 and text_7 and text_8 and text_9 :
         the_same_words.append(w)
 
+#import stopwords
+from nltk.corpus import stopwords
+stop_words=set(stopwords.words('english'))
 
+for w in the_same_words:
+    if w in stop_words:
+        the_same_words.remove(w)
+        
 print(the_same_words)
