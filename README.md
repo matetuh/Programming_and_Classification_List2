@@ -9,7 +9,7 @@
 > Steps i made:
 - reading the winnie pooh pdf using 'parser.from_file()' method
 ```python
-text = parser.from_file("D:/Studia_mgr_BigDataAnalytics/Zajecia/1 semestr/Programming and Calssification/Laboratorium/Lista 2/Programming_and_Classification_List2/winnie-the-pooh.pdf")
+text = parser.from_file(".../winnie-the-pooh.pdf")
 ```
 - tokenize the data using 'nltk.tokenize()' method
 ```python
